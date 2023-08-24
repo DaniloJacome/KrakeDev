@@ -1,1 +1,4 @@
 soy el archivo 2 
+x fin me hace caso
+estuve untracked mucho tiempo
+ahora estoy staged
