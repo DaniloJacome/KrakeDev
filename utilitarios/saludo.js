@@ -9,7 +9,15 @@ saludar=function(){
     //Crear,"mostrarTexto" funcion imprimir contenido en pantalla
     let mensajeBienvenida="Bienvenido "+nombre+" "+apellido;
     mostrarTexto("lblResultado",mensajeBienvenida);
+     //Crear,"rutaImagen" funcion imprimir contenido en pantalla
+    mostrarImagen("imgSaludo","./imagenes/saludo.gif");
 } 
+//Crear funcion "rutaImagen" contenido en pantalla
+mostrarImagen=function(idComponente,rutaImagen){
+    let componente
+    componente=document.getElementById(idComponente);
+    componente.src=rutaImagen;
+}
 //Crear funcion "mostrarTexto" contenido en pantalla
 mostrarTexto=function(idComponente,mensaje){
     let componente
