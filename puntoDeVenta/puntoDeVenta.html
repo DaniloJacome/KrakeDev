@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="puntoDeVenta.js"></script>
+        <script src="serviciosPuntoDeVenta.js"></script>
+        <script src="utilitarios.js"></script>
+    </head>
+    <body>
+        <h3>Ingrese el nombre del producto</h3>
+        <input type="text" id="txtProducto"/>
+        <h3>Ingrese la cantidad a comprar</h3>
+        <input type="text" id="txtCantidad"/>
+        <h3>Ingrese el precio del producto</h3>
+        <input type="text" id="txtPrecio"/>
+        <h3>Ingrese el porcentaje de descuento</h3>
+        <input type="text" id="txtPorcentajeDescuento"/>
+        <h3>Subtotal</h3>
+        <h3 id="lblSubtotal">0.0</h3>
+        <h3>Descuento</h3>
+        <h3 id="lblDescuento">0.0</h3>
+        <h3>IVA 12%</h3>
+        <h3 id="lblValorIVA">0.0</h3>
+        <h3>Total</h3>
+        <h3 id="lblTotal">0.0</h3>
+
+        <input type="button" value="CALCULAR TOTAL" 
+        onclick="calcularValorTotal()"/>
+    
+    </body> 
+</html>
