@@ -11,6 +11,8 @@ saludar=function(){
     mostrarTexto("lblResultado",mensajeBienvenida);
      //Crear,"rutaImagen" funcion imprimir contenido en pantalla
     mostrarImagen("imgSaludo","./imagenes/saludo.gif");
+    //limpiar texto en caja Nombre
+    mostrarTextoEnCaja("txtNombre","");
 } 
 //Crear funcion "rutaImagen" contenido en pantalla
 mostrarImagen=function(idComponente,rutaImagen){
@@ -23,6 +25,12 @@ mostrarTexto=function(idComponente,mensaje){
     let componente
     componente=document.getElementById(idComponente);
     componente.innerText=mensaje;
+}
+//Limpiar texto en cajas
+mostrarTextoEnCaja=function(idComponente,mensaje){
+    let componente
+    componente=document.getElementById(idComponente);
+    componente.value=mensaje;
 }
 //recuperamos la funcion
 recuperarTexto=function(idComponente){
