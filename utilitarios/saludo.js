@@ -3,9 +3,20 @@ saludar=function(){
     let nombre=recuperarTexto("txtNombre");
     //recuperar el valor de la caja de texto txtNombre
     let apellido=recuperarTexto("txtApellido");
+    //recuperar el valor de la caja en Int y Float
     let edad=recuperarInt("txtEdad");
     let estatura=recuperarFloat("txtEstatura");
+    //Crear,"mostrarTexto" funcion imprimir contenido en pantalla
+    let mensajeBienvenida="Bienvenido "+nombre+" "+apellido;
+    mostrarTexto("lblResultado",mensajeBienvenida);
 } 
+//Crear funcion "mostrarTexto" contenido en pantalla
+mostrarTexto=function(idComponente,mensaje){
+    let componente
+    componente=document.getElementById(idComponente);
+    componente.innerText=mensaje;
+}
+//recuperamos la funcion
 recuperarTexto=function(idComponente){
     let componente;
     let valorIngresado;
