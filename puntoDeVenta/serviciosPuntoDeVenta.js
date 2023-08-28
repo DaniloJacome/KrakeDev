@@ -8,6 +8,11 @@ calcularValorIva=function(idComponente,valorIVA){
     componente=document.getElementById(idComponente);
     componente.innerText=valorIVA; 
 }
+calcularSubTotal=function(idComponente,valorSubtotal){
+    let componente;
+    componente=document.getElementById(idComponente);
+    componente.innerText=valorSubtotal; 
+}
 recuperarTexto=function(idComponente){
     let componente;
     let valorIngresado;

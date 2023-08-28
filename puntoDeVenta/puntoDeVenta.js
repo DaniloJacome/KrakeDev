@@ -10,7 +10,7 @@ calcularValorTotal = function(){
     //4. Recuperar el porcentaje de descuento como int
     let porcentajeDescuento=recuperarInt("txtPorcentajeDescuento");
     let valorDescuento=precioProducto*porcentajeDescuento/100;
-    let valorSubtotal;
+    let valorSubtotal=precioProducto*cantidad;
     let valorIVA=precioProducto*0.12;
     let valorTotal;
     //4. Invocar a calcularSubtotal y el retorno guardar en la variable valorSubtotal
@@ -44,6 +44,7 @@ calcularValorTotal = function(){
             Si el caso de prueba es exitoso, hacer un commit
         */
     //10. Invocar a calcularTotal y lo que devuelve guardar en la variable valorTotal
+    calcularSubTotal("lblSubtotal",valorSubtotal);
     //11. Mostrar el resultado en el componente lblTotal
      /*
             Caso de prueba: 
