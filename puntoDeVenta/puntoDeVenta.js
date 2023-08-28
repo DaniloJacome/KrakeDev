@@ -1,18 +1,18 @@
 calcularValorTotal = function(){
     //variables para recuperar los valores de las cajas de texto
-    let nombreProducto;
-    let precioProducto;
-    let cantidad;
-    let porcentajeDescuento;
     //variables para almacenar los retornos de las funciones
     let valorSubtotal;
-    let valorDescuento;
+    let valorDescuento=precioProducto*porcentajeDescuento/100;
     let valorIVA;
     let valorTotal;
     //1. Recuperar el nombre del producto como String
+    let nombreProducto=recuperarTexto("txtProducto");
     //2. Recuperar el precio como float
+    let precioProducto=recuperarFloat("txtPrecio");
     //3. Recuperar cantidad como int
+    let cantidad=recuperarInt("txtCantidad");
     //4. Recuperar el porcentaje de descuento como int
+    let porcentajeDescuento=recuperarInt("txtPorcentajeDescuento");
     //4. Invocar a calcularSubtotal y el retorno guardar en la variable valorSubtotal
     //5. Mostrar valorSubtotal en el componente lblSubtotal
         /*
@@ -22,6 +22,7 @@ calcularValorTotal = function(){
             Si el caso de prueba es exitoso, hacer un commit
          */
     //6. Invocar a calcularDescuento y lo que devuelve guardar en la variable valorDescuento
+    calcularDescuento("lblDescuento",valorDescuento);
     //7. Mostrar el resultado en el componente lblDescuento
         /*
             Caso de prueba: 
