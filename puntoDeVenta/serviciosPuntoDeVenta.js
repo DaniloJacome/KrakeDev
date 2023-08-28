@@ -3,6 +3,11 @@ calcularValorDescuento=function(idComponente,valorDescuento){
     componente=document.getElementById(idComponente);
     componente.innerText=valorDescuento;   
 }
+calcularValorIva=function(idComponente,valorIVA){
+    let componente;
+    componente=document.getElementById(idComponente);
+    componente.innerText=valorIVA; 
+}
 recuperarTexto=function(idComponente){
     let componente;
     let valorIngresado;
