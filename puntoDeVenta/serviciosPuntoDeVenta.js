@@ -13,8 +13,8 @@ calcularSubTotal=function(idComponente,valorSubtotal){
     componente=document.getElementById(idComponente);
     componente.innerText=valorSubtotal; 
 }
-calcularValorTotal=function(idComponente,valorTotal){
-    let componente;
-    componente=document.getElementById(idComponente);
-    componente.innerText=valorTotal; 
+calcularTotal=function(subtotal,descuento,iva){
+    let total;
+    total=(subtotal-descuento)+iva
+    return total;
 }

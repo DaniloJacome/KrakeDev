@@ -10,9 +10,9 @@ calcularValorTotal = function(){
     //4. Recuperar el porcentaje de descuento como int
     let porcentajeDescuento=recuperarInt("txtPorcentajeDescuento");
     let valorSubtotal=precioProducto*cantidad;
-    let valorDescuento=precioProducto*porcentajeDescuento/100;
+    let valorDescuento=(precioProducto*porcentajeDescuento)/100;
     let valorIVA=precioProducto*0.12;
-    let valorTotal=valorSubtotal-valorDescuento+valorIVA;
+    let valorTotal=calcularTotal(valorSubtotal,valorDescuento,valorIVA);
     //4. Invocar a calcularSubtotal y el retorno guardar en la variable valorSubtotal
     calcularSubTotal("lblSubtotal",valorSubtotal); 
     //5. Mostrar valorSubtotal en el componente lblSubtotal
@@ -34,7 +34,7 @@ calcularValorTotal = function(){
     //8. Invocar a calcularIVA y lo que devuelve guardar en la variable valorIVA
     calcularValorIva("lblValorIVA",valorIVA);
 	//   El IVA debe calcularse sobre el valor del subtotal menos el descuento
-    //9. Mostrar el resultado en el componente lblSubTotal   
+    //9. Mostrar el resultado en el componente lblValorIva   
     /*
             Caso de prueba: 
                 precioProducto: 5.4  cantidad: 10 descuento: 10
@@ -45,7 +45,7 @@ calcularValorTotal = function(){
             Si el caso de prueba es exitoso, hacer un commit
         */
     //10. Invocar a calcularTotal y lo que devuelve guardar en la variable valorTotal
-    calcularValorTotal("lblTotal",valorTotal);
+    mostrarTexto("lblTotal",valorTotal);
     //11. Mostrar el resultado en el componente lblTotal
      /*
             Caso de prueba: 
@@ -57,6 +57,8 @@ calcularValorTotal = function(){
             Si el caso de prueba es exitoso, hacer un commit
         */
     //12. Mostrar un resumen en el componente lblResumen, si no existe debe agregarlo
+    let mensajeBienvenida="Valor a pagar por "+cantidad+" "+nombreProducto+" "+"con"+" "+valorDescuento+"%"+" "+"de descuento:"+" "+"USD"+" "+valorTotal;
+    mostrarTexto("lblResumen",mensajeBienvenida);
         /*
             Ejemplo: 
                 Valor a pagar por 20 cerveza corona con 10% de descuento: USD 48.75
