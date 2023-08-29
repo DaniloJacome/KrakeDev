@@ -9,13 +9,13 @@ mostrarTexto=function(idComponente,mensaje){
     componente=document.getElementById(idComponente);
     componente.innerText = mensaje;
 }
-
 mostrarTextoEnCaja = function(idComponente,mensaje){
     let componente;
     componente=document.getElementById(idComponente);
     componente.value = mensaje;
 }
-limpiar=function(idComponente,mensaje){
+
+mostrarLimpiar = function(idComponente,mensaje){
     let componente;
     componente=document.getElementById(idComponente);
     componente.value = mensaje;

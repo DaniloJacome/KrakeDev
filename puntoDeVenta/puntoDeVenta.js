@@ -59,6 +59,10 @@ calcularValorTotal = function(){
     //12. Mostrar un resumen en el componente lblResumen, si no existe debe agregarlo
     let mensajeBienvenida="Valor a pagar por "+cantidad+" "+nombreProducto+" "+"con"+" "+valorDescuento+"%"+" "+"de descuento:"+" "+"USD"+" "+valorTotal;
     mostrarTexto("lblResumen",mensajeBienvenida);
+    mostrarTextoEnCaja("txtProducto","");
+    mostrarTextoEnCaja("txtCantidad","0");
+    mostrarTextoEnCaja("txtPrecio","0.0");
+    mostrarTextoEnCaja("txtPorcentajeDescuento","0");
         /*
             Ejemplo: 
                 Valor a pagar por 20 cerveza corona con 10% de descuento: USD 48.75
@@ -67,6 +71,10 @@ calcularValorTotal = function(){
     
 }   
 limpiar=function(){
+    mostrarLimpiarEnCaja("txtProducto","");
+    mostrarLimpiarEnCaja("txtCantidad","0");
+    mostrarLimpiarEnCaja("txtPrecio","0.0");
+    mostrarLimpiarEnCaja("txtPorcentajeDescuento","0");  
     /*
         Dejar todas las cajas de texto con el valor cadena vacía, 0 ó 0.0 según el tipo de dato
         Dejar todos los textos de los montos con el valor 0.0
