@@ -6,7 +6,7 @@ calcularResultado=function(idComponente,valorResultado){
 calcularPromedio=function(resultado){
     let promedio;
     promedio=(resultado/3)
-    valorFormateado=resultado.toFixed(2);
+    valorFormateado=promedio.toFixed(2);
     return valorFormateado;
     
 }
