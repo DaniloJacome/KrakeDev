@@ -28,7 +28,6 @@ recuperarTexto=function(idComponente){
     valorIngresado=componente.value;
     return valorIngresado;
 }
-
 recuperarInt = function(idComponente){
    let valorCaja= recuperarTexto(idComponente);
    let valorEntero = parseInt(valorCaja);
@@ -40,5 +39,13 @@ recuperarFloat = function(idComponente){
     let valorFlotante = parseFloat(valorCaja);
     return valorFlotante;
  }
-
-
+ cambiarTexto=function(idComponente,mensaje){
+    let componente;
+    componente=document.getElementById(idComponente);
+    componente.innerText=mensaje;
+}
+cambiarImagen=function(idComponente,imagen){
+    let componente;
+    componente=document.getElementById(idComponente);
+    componente.src=imagen;
+}

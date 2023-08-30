@@ -6,6 +6,13 @@ calcularPromedioNotas = function(){
     let valorPromedio=calcularPromedio(valorResultado);
     calcularResultado("lblSubtotal",valorResultado); 
     mostrarTexto("lblTotal",valorPromedio);
+
+    let imagenElemento = document.getElementById("imagenMostrada");
+        if (valorPromedio>7) {
+            imagenElemento.src = "./imagenes/exito.gif"; 
+        } else {
+            imagenElemento.src = "./imagenes/fracaso.gif";
+        }
 }
 calcularPromedio=function(){
     let n1;
@@ -18,4 +25,8 @@ calcularPromedio=function(){
     resultadoEntero=parseFloat(resultadoSuma);
     promedio=resultadoEntero/3;
     return promedio
+}
+imagenResultado=function(){
+
+    return valorDado;
 }
