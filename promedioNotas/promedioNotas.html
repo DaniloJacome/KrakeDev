@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="promedioNotas.js"></script>
+        <script src="serviciosPormedioNotas.js"></script>
+        <script src="utilitarios.js"></script>
+    </head>
+    <body>
+        <h2>Ingrese la primera nota</h2>
+        <input type="text" id="txtPrimeraNota" onclick="(calcularPromedioNotas);"/>
+        <h2>Ingrese la segunda nota</h2>
+        <input type="text" id="txtSegundaNota" onclick="(calcularPromedioNotas);"/>
+        <h2>Ingrese la tercer nota</h2>
+        <input type="text" id="txtTerceraNota" onclick="(calcularPromedioNotas);"/>
+        <h3>Resultado</h3>
+        <h3 id="lblSubtotal">0.0</h3>
+        <h3>Promedio</h3>
+        <h3 id="lblSubtotal">0.0</h3>
+        <input type="button" value="CALCULAR TOTAL" onclick="calcularPromedioNotas()"/>
+    </body>
+</html>
