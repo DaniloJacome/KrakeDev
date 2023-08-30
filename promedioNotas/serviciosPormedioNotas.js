@@ -1,14 +1,9 @@
-calcularResultado=function(idComponente,valorResultado){
-    let componente;
-    componente=document.getElementById(idComponente);
-    componente.innerText=valorResultado; 
-}
-calcularPromedio=function(resultado){
-    let promedio;
-    promedio=(resultado/3)
-    valorFormateado=promedio.toFixed(2);
-    return valorFormateado;
-    
+calcularPromedio=function(n1,n2,n3){
+    let valorResultado;
+    valorResultado=(n1);
+    valorPromedio=valorResultado/3;
+    valorFormateado=valorPromedio.toFixed(2);
+    return valorFormateado;    
 }
 
 
