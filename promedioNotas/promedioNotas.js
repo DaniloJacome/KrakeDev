@@ -2,10 +2,10 @@ calcularPromedioNotas = function(){
     let primeraNota=recuperarFloat("txtPrimeraNota");
     let segundaNota=recuperarInt("txtSegundaNota");
     let TerceraNota=recuperarInt("txtTerceraNota");
-    let valorSubtotal=primeraNota+segundaNota+TerceraNota;
-    calcularSubTotal("lblSubtotal",valorSubtotal); 
-    
-    
+    let valorResultado=primeraNota+segundaNota+TerceraNota;
+    let valorPromedio=calcularPromedio(valorResultado);
+    calcularResultado("lblSubtotal",valorResultado); 
+    mostrarTexto("lblTotal",valorPromedio);
 }
 calcularPromedio=function(){
     let n1;
