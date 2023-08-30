@@ -3,7 +3,7 @@ calcularPromedioNotas = function(){
     let segundaNota=recuperarFloat("txtSegundaNota");
     let TerceraNota=recuperarFloat("txtTerceraNota");
     let valorResultado=primeraNota+segundaNota+TerceraNota;
-    let valorPromedio=calcularPromedio(valorResultado);
+    let valorPromedio=calcularPromedio(n1,n2,n3);
     mostrarTexto("lblSubtotal",valorResultado); 
     mostrarTexto("lblTotal",valorPromedio);
 
@@ -14,3 +14,4 @@ calcularPromedioNotas = function(){
             imagenElemento.src = "./imagenes/fracaso.gif";
         }
 }
+

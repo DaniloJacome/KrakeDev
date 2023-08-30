@@ -1,4 +1,4 @@
-calcularPromedio=function(n1,n2,n3){
+calcularPromedio=function(n1){
     let valorResultado;
     valorResultado=(n1);
     valorPromedio=valorResultado/3;
