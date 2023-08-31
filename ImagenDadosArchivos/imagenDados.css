@@ -1,0 +1,92 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .principal {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+   
+  }
+
+body{
+    background-image: url("dragonBall.jpg");
+    background-size: cover;
+    background-color: aliceblue;
+}
+.imagen{
+    display: flex;
+    flex:5;
+    background-color: rgba(255, 255, 255, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+.botones{
+    display: flex;
+    flex:2;
+
+    justify-content: center;
+    align-items: center;
+}
+.espacio{
+    display: flex;
+    flex:2;
+}
+
+.estiloBoton{
+    background-color: rgb(0, 0, 0); 
+    border: none;
+    color:white;
+    padding: 15px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 5px;
+    margin: 5px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif
+
+}
+.estiloBoton:hover{
+    background-color: rgb(87, 86, 86); 
+    border: none;
+    color:white;
+    padding: 15px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 5px;
+    margin: 5px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif
+
+}
+.estiloBoton:active{
+    background-color: rgb(0, 0, 0); 
+    border: none;
+    color:white;
+    padding: 15px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 5px;
+    margin: 5px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif
+
+}
+h1{
+    font-size: 50px;
+}
+
+.info{
+    font-size: 40px;
+    color: blue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.datos{
+    color: black;
+    margin-left: 40px;
+}
+.resultado{
+    color:red;
+    font-size: 60px;
+}
