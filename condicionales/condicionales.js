@@ -53,28 +53,18 @@ calcularDescuento=function(precio,cantidad){
 }
 
 determinarColesterolLDL=function(nivelColesterol) {
-    let nivelColesterolFloat=parseFloat(nivelColesterol);
+    let nivelColesterolFloat=recuperarFloat("txtColesterol");
     let colesterolLDL;
-    if (nivelColesterolFloat<100) {
-      colesterolLDL = console.log(
-        `Su nivel den colesterol LDL es de ${nivelColesterolFloat}. Optimo (lo mejor para sus salud)`
-      );
-    } else if (nivelColesterolFloat>=100 && nivelColesterolFloat<=129) {
-      colesterolLDL=console.log(
-        `Su nivel den colesterol LDL es de ${nivelColesterolFloat}. Casi optimo (mas o menos)`
-      );
-    } else if (nivelColesterolFloat>=130 && nivelColesterolFloat<=159) {
-      colesterolLDL=console.log(
-        `Su nivel den colesterol LDL es de ${nivelColesterolFloat}. Limite superior del rango normal`
-      );
-    } else if (nivelColesterolFloat>=160 && nivelColesterolFloat<=189) {
-      colesterolLDL = console.log(
-        `Su nivel den colesterol LDL es de ${nivelColesterolFloat}. NIVEL ALTO`
-      );
-    } else if (nivelColesterolFloat>=190) {
-      colesterolLDL = console.log(
-        `Su nivel den colesterol LDL es de ${nivelColesterolFloat}. NIVEL MUY ALTO`
-      );
+    if(nivelColesterolFloat<100){
+      colesterolLDL=console.log("Su nivel den colesterol LDL es de"+ nivelColesterolFloat + "Optimo");
+    } else if(nivelColesterolFloat>=100 && nivelColesterolFloat<=129) {
+      colesterolLDL=console.log("Su nivel den colesterol LDL es de" + nivelColesterolFloat + "Casi optimo");
+    } else if(nivelColesterolFloat>=130 && nivelColesterolFloat<=159) {
+      colesterolLDL=console.log("Su nivel den colesterol LDL es de" + nivelColesterolFloat + "Limite superior del rango normal");
+    } else if(nivelColesterolFloat>=160 && nivelColesterolFloat<=189) {
+      colesterolLDL=console.log("Su nivel den colesterol LDL es de" + nivelColesterolFloat + "NIVEL ALTO");
+    } else if(nivelColesterolFloat>=190) {
+      colesterolLDL=console.log("Su nivel den colesterol LDL es de" + nivelColesterolFloat + "NIVEL MUY ALTO");
     }
     return colesterolLDL;
 }
@@ -116,9 +106,9 @@ esDigito =function(caracter) {
 }
 
 darPermiso=function(notaMatematica, notaFisica, notaGeometria) {
-    let notaMatematica=parseFloat(notaMatematica);
-    let notaFisica=parseFloat(notaFisica);
-    let notaGeometria=parseFloat(notaGeometria);
+    let notaMatematica=recuperarFloat("txtMatematica");
+    let notaFisica=recuperarFloat("txtFisica");
+    let notaGeometria=recuperarFloat("txtGeometria");
     if (matematica>90 || fisica>90 || geometria>90) {
       return true;
     } else {
@@ -127,9 +117,9 @@ darPermiso=function(notaMatematica, notaFisica, notaGeometria) {
   }
 
 otorgarPermiso=function(notaMatematica,notaFisica,notaGeometria){
-    let notaMatematica=recuperarFloat(notaMatematica);
-    let notaFisica=recuperarFloat(notaFisica);
-    let notaGeometria=recuperarFloat(notaGeometria);
+    let notaMatematica=recuperarFloat("txtMatematica");
+    let notaFisica=recuperarFloat("txtFisica");
+    let notaGeometria=recuperarFloat("txtGeometria");
     if(notaMatematica>90 || notaFisica>90 && notaGeometria>80){
         return true;
     }else{
@@ -138,9 +128,9 @@ otorgarPermiso=function(notaMatematica,notaFisica,notaGeometria){
 }
 
 dejarSalir=function(notaMatematica,notaFisica,notaGeometria){
-    let notaMatematica=recuperarFloat(notaMatematica);
-    let notaFisica=recuperarFloat(notaFisica);
-    let notaGeometria=recuperarFloat(notaGeometria);
+    let notaMatematica=recuperarFloat("txtMatematica");
+    let notaFisica=recuperarFloat("txtFisica");
+    let notaGeometria=recuperarFloat("txtGeometria");
     if(notaMatematica>90 || notaFisica>90 || notaGeometria>90 && notaFisica>notaMatematica){
         return true;
     }else{
