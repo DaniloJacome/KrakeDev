@@ -57,14 +57,19 @@ determinarColesterolLDL=function(nivelColesterol) {
     let colesterolLDL;
     if(nivelColesterolFloat<100){
       colesterolLDL=console.log("Su nivel den colesterol LDL es de"+ nivelColesterolFloat + "Optimo");
+      colesterolLDL=nivelColesterolFloat;
     } else if(nivelColesterolFloat>=100 && nivelColesterolFloat<=129) {
       colesterolLDL=console.log("Su nivel den colesterol LDL es de" + nivelColesterolFloat + "Casi optimo");
+      colesterolLDL=nivelColesterolFloat;
     } else if(nivelColesterolFloat>=130 && nivelColesterolFloat<=159) {
       colesterolLDL=console.log("Su nivel den colesterol LDL es de" + nivelColesterolFloat + "Limite superior del rango normal");
+      colesterolLDL=nivelColesterolFloat;
     } else if(nivelColesterolFloat>=160 && nivelColesterolFloat<=189) {
       colesterolLDL=console.log("Su nivel den colesterol LDL es de" + nivelColesterolFloat + "NIVEL ALTO");
+      colesterolLDL=nivelColesterolFloat;
     } else if(nivelColesterolFloat>=190) {
       colesterolLDL=console.log("Su nivel den colesterol LDL es de" + nivelColesterolFloat + "NIVEL MUY ALTO");
+      colesterolLDL=nivelColesterolFloat;
     }
     return colesterolLDL;
 }
