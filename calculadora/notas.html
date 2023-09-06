@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="notas.css" />
+    <script src="notas.js"></script>
+    <script src="utilitarios.js"></script>
+</head>
+
+<body>
+    <div class="principal">
+        <div class="logoEscuela">
+            <img src="./imagenes/logoKrakeDev.png" width="80%" />
+        </div>
+
+        <div class="contenido">
+            <div class="titulo">
+                PROMEDIO DE NOTAS
+            </div>
+
+            <div class="ingresoDatos">
+                <div class="tituloCampo">
+                    NOTA 1
+                </div>
+                <div>
+                    <input type="text" class="cajaTexto" id="txtNota1"/>
+                    <div class="error" id="lblError1"></div>
+                </div>
+            </div>
+           
+            <div class="ingresoDatos">
+                <div class="tituloCampo">
+                    NOTA 2
+                </div>
+                <div>
+                    <input type="text" class="cajaTexto" id="txtNota2"/>
+                    <div class="error" id="lblError2"></div>
+                </div>
+            </div>
+            <div class="ingresoDatos">
+                <div class="tituloCampo">
+                    NOTA 3
+                </div>
+                <div>
+                    <input type="text" class="cajaTexto" id="txtNota3"/>
+                    <div class="error" id="lblError3"></div>
+                </div>
+            </div>
+            <div class="botones">
+                <div class="contenedorBoton">
+                    <input type="button" value="CALCULAR PROMEDIO"
+                     class="estiloBoton" onclick="calcular();" />
+                </div>
+             </div>
+        </div>
+        <div class="areaResultado">
+            <div class="resultado">
+                <div>
+                    PROMEDIO:
+                </div>
+                <div id="lblResultado">
+                    0.0
+                </div>
+            </div>
+           
+            <div class="imagenResultado">
+                <img src="./imagenes/notas.png" width="50%" />
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
