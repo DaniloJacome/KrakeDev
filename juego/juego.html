@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reto36</title>
+    <script src="juego.js"></script>
+    <script src="serviciosJuego.js"></script>
+    <script src="utilitarios.js"></script>
+    <link href="juego.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="seleccionFoto">
+        <div class="tituloPrincipal">
+            JUEGO PIEDRA PAPEL O TIJERA
+        </div>
+        <div class="eleccionImagen">Elija la imagen</div>
+        <div class="imagenesSeleccion">
+            <img src="./Imagenes/papel.png" onclick="jugar(2)" width="200px">
+            <img src="./Imagenes/piedra.png" onclick="jugar(1)" width="200px">
+            <img src="./Imagenes/tijera.png" onclick="jugar(3)" width="200px">
+        </div>
+    </div>
+
+    <div class="mostrarSeleccion">
+        <div class="cuadro">
+            <div class="titulo">Imagen que elegiste</div>
+            <div class="imagen">
+                <img src=" " id="imgUsuario" width="100px">
+            </div>
+        </div>
+
+        <div class="cuadro">
+            <div class="titulo">Imagen que elegio la maquina</div>
+            <div class="imagen">
+                <img src=" " id="imgMaquina" width="100px">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mostrarResultado">
+
+        <div class="contenedorResultado">
+            <div class="eleccionImagen">Resultado</div>
+            <div class="titulo">
+                <div id="lblResultado"></div>
+            </div>
+        </div>
+
+        <div class="cuadroContador">
+            <div class="cuadroTitulo">
+                <div class="tituloCampo">Maquina</div>
+                <div class="tituloCampo">Usuario</div>
+            </div>
+            <div class="cuadroResultado">
+                <div class="cuadroCampo">
+                    <div id="lblResultadoMaquina">0</div>
+                </div>
+                <div class="cuadroCampo">
+                    <div id="lblResultadoUsuario">0</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
