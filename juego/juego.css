@@ -1,0 +1,102 @@
+.seleccionFoto {
+  display: flex;
+  flex-direction: column;
+}
+
+.tituloPrincipal {
+  display: flex;
+  justify-content: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 45px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.eleccionImagen {
+  display: flex;
+  justify-content: center;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+}
+
+.imagenesSeleccion {
+  display: flex;
+  justify-content: center;
+}
+.mostrarSeleccion {
+  border-radius: 50px;
+  background-color: rgba(215, 226, 55, 0.767);
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+  margin-right: 250px;
+  margin-left: 250px;
+  margin-bottom: 20px;
+}
+
+.cuadro {
+  margin-top: 20px;
+  flex: 1;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.titulo {
+  display: flex;
+  font-size: 15px;
+  justify-content: center;
+  font-family:sans-serif;
+}
+
+.imagen {
+  display: flex;
+  justify-content: center;
+}
+
+.contenedorResultado {
+  border-radius: 50px;
+  background-color: rgba(215, 226, 55, 0.767);
+  margin-right: 250px;
+  margin-left: 250px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.cuadroContador {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  background-color: rgba(14, 53, 224, 0.753);
+  margin-right: 350px;
+  margin-left: 350px;
+}
+
+.cuadroTitulo {
+  display: flex;
+  flex-direction: row;
+}
+
+.tituloCampo {
+  background-color: rgba(238, 8, 0, 0.664);
+  display: flex;
+  flex: 1;
+  font-size: 18px;
+  color: black;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  justify-content: center;
+  border-radius: 10px;
+  
+}
+
+.cuadroResultado {
+  display: flex;
+  flex-direction: row;
+}
+
+.cuadroCampo {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
