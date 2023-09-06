@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>RETO 35</title>
+    <script src="placas.js"></script>
+    <script src="serviciosPlacas.js"></script>
+    <script src="utilitariosCadenas.js"></script>
+    <link href="placas.css" rel="stylesheet">
+</head>
+
+<body class="body">
+    <div class="titulo">
+        CONSULTA INFORMACION DEL VEHÍCULO
+    </div>
+    <div class="imagenLogo">
+        <img src="./imagenes/amt.jpg" />
+    </div>
+
+    <div class="principal">
+        <div class="contenido">
+            <div class="ingresoDatos">
+                <div class="tituloCampo">INGRESE LA PLACA</div>
+                <div class="contenedorTexto">
+                    <input type="text" id="txtPlaca" />
+                    <div id="lblPlacaValida" class="errores"></div>
+                    <div id="lblErrores" class="errores"></div>
+                    <div id="lblErrores1" class="errores"></div>
+                    <div id="lblErrores2" class="errores"></div>
+                    <div id="lblErrores3" class="errores"></div>
+                    <div id="lblErrores4" class="errores"></div>
+                    <div id="lblErrores5" class="errores"></div>
+                    <div id="lblErrores6" class="errores"></div>
+                    <div id="lblErrores7" class="errores"></div>
+                    <div id="lblErrores8" class="errores"></div>
+                </div>
+            </div>
+
+            <div class="botones">
+                <div>
+                    <input type="button" value="VALIDAR" onclick="validarPlaca()" class="estiloBoton" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
