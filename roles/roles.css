@@ -81,44 +81,45 @@ table {
 th {
   padding-top: 10px;
   padding-bottom: 10px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
   width: 20px;
+  border: 0.5px solid #1878a8;
 }
 
 td {
   padding-top: 5px;
   padding-bottom: 5px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
-  border: 0.5px solid #b0bec5;
+  border: 0.5px solid #1878a8;
 }
 
 tr:nth-child(even) {
-  background-color: #eceff1;
+  background-color: #878a8b71;
 }
 
 th:nth-child(1) {
-  background-color: #808b96;
-  color: #ffffffd5;
+  background-color: #0cb5e9;
+  color: white;
 }
 
 th:nth-child(2) {
-  background-color: #4fc3f7;
-  color: #13394bc9;
+  background-color: #3633ce;
+  color: white;
 }
 
 th:nth-child(3) {
-  background-color: #ffca28;
-  color: #5a470ed7;
+  background-color: #cf7e13;
+  color: white;
 }
 th:nth-child(4) {
-  background-color: #e57373;
-  color: #411f1fd2;
+  background-color: #a50e0ee0;
+  color: white;
 }
 th:nth-child(5) {
-  background-color: #a569bd;
-  color: #472d52d0;
+  background-color: #d63e9c;
+  color: white;
 }
 
 .areaTabla {
