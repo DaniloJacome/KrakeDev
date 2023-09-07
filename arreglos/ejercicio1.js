@@ -39,3 +39,26 @@ const calcularPromedio = function () {
     promedio = sumaNotas / nota.length;
     return promedio.toFixed(2);
 }
+
+const generarTabla = function(){
+    let contenidoTabla = " ";
+    let cmpTabla = document.getElementById("divTabla");
+    contenidoTabla+="<table><tr><td>UNO</td></tr>"+"<tr><td>DOS</td></tr></table>";
+    cmpTabla.innerHTML=contenidoTabla;
+}
+
+const mostrarNotas = function(){
+    let cmpTabla = document.getElementById("divTabla");
+    let contenidoTabla="<table><tr><th>NOTA</th></tr>"
+    let miNota;
+    for(let i=0;i<nota.length;i++){
+        miNota= nota[i];
+        contenidoTabla+="<tr><td>";
+        contenidoTabla+=miNota;
+        contenidoTabla+="</tr></td>";
+    }
+
+    contenidoTabla+="</table>"
+    cmpTabla.innerHTML=contenidoTabla;
+
+}
