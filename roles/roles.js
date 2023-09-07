@@ -64,3 +64,115 @@ const deshabilitarComponentesDeIngreso = function () {
     deshabilitarComponente("txtSueldo");
     deshabilitarComponente("btnGuardar");
 }
+
+const guardar = function () {
+    let cedulaCaja = recuperarTexto("txtCedula");
+    let nombreCaja = recuperarTexto("txtNombre");
+    let apellidoCaja = recuperarTexto("txtApellido");
+    let sueldoCaja = recuperarFloat("txtSueldo");
+
+    // cedula
+    let digitoCedula;
+    let nuevaCedula;
+    let resultadoDigito = false;
+    if (cedulaCaja.length == 10) {
+        mostrarTexto("lblErrorCedula", " ");
+        for (let i = 0; i < cedulaCaja.length; i++) {
+            digitoCedula = cedulaCaja.charCodeAt(i);
+            if (!esDigito(digitoCedula)) {
+                resultadoDigito = true;
+            }
+        }
+
+        if (resultadoDigito) {
+            mostrarTexto("lblErrorCedula", "No debe tener letras");
+        } else {
+            nuevaCedula = true;
+        }
+
+    } else {
+        mostrarTexto("lblErrorCedula", " Tiene que tener 10 digitos");
+    }
+
+    //Nombre
+    let mayusculasNombre;
+    let nuevoNombre;
+    let resultadoMayuscula = false;
+    if (nombreCaja.length >= 3) {
+        mostrarTexto("lblErrorNombre", " ");
+        for (let i = 0; i < nombreCaja.length; i++) {
+            mayusculasNombre = nombreCaja.charCodeAt(i);
+            if (!esMayuscula(mayusculasNombre)) {
+                resultadoMayuscula = true;
+            }
+        }
+
+        if (resultadoMayuscula) {
+            mostrarTexto("lblErrorNombre", "Deben ser mayusculas");
+        } else {
+            nuevoNombre = true;
+        }
+
+    } else {
+        mostrarTexto("lblErrorNombre", " Tiene que tener al menos 3 caracteres");
+    }
+
+    //Apellido
+    let mayusculasApellido;
+    let nuevoApellido;
+    let resultadoMayusculaApellido = false;
+    if (apellidoCaja.length >= 3) {
+        mostrarTexto("lblErrorApellido", " ");
+        for (let i = 0; i < apellidoCaja.length; i++) {
+            mayusculasApellido = apellidoCaja.charCodeAt(i);
+            if (!esMayuscula(mayusculasApellido)) {
+                resultadoMayusculaApellido = true;
+            }
+        }
+
+        if (resultadoMayusculaApellido) {
+            mostrarTexto("lblErrorApellido", "Deben ser mayusculas");
+        } else {
+            nuevoApellido = true;
+        }
+
+    } else {
+        mostrarTexto("lblErrorApellido", " Tiene que tener al menos 3 caracteres");
+    }
+
+    //Sueldo
+    let nuevoSuelo;
+    if (sueldoCaja >= parseFloat(400) && sueldoCaja <= parseFloat(5000)) {
+        mostrarTexto("lblErrorSueldo", " ");
+        nuevoSuelo = true;
+    } else {
+        mostrarTexto("lblErrorSueldo", " Tiene que tener entre $400 y $5000");
+    }
+
+    if (nuevaCedula & nuevoNombre & nuevoApellido & nuevoSuelo) {
+        if (esNuevo) {
+            let nuevoCliente = {};
+            nuevoCliente.cedula = cedulaCaja;
+            nuevoCliente.nombre = nombreCaja;
+            nuevoCliente.apellido = apellidoCaja;
+            nuevoCliente.sueldo = sueldoCaja;
+            nuevoEmpleado = agregarEmpleado(nuevoCliente);
+            if (nuevoEmpleado) {
+                alert("EMPLEADO GUARDADO CORRECTAMENTE");
+                mostrarEmpleados();
+            } else {
+                alert("YA EXISTE UN EMPLEADO CON LA CEDULA " + cedulaCaja);
+            }
+        }
+        deshabilitarComponentesDeIngreso();
+    }
+}
+
+const ejecutarNuevo = function () {
+    habilitarComponente("txtCedula");
+    habilitarComponente("txtNombre");
+    habilitarComponente("txtApellido");
+    habilitarComponente("txtSueldo");
+    habilitarComponente("btnGuardar");
+    esNuevo = true;
+}
