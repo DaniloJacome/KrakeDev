@@ -57,6 +57,29 @@ const mostrarEmpleados = function () {
     cmpTabla.innerHTML = contenidoTabla;
 }
 
+const buscarEmpleado = function (cedulaIngresada) {
+    let empleadosBuscar;
+    let empleadoEncontrado = null;
+    for (let i = 0; i < empleados.length; i++) {
+        empleadosBuscar = empleados[i];
+        if (empleadosBuscar.cedula == cedulaIngresada) {
+            empleadoEncontrado = empleadosBuscar;
+            break;
+        }
+    }
+    return empleadoEncontrado;
+}
+
+const agregarEmpleado = function (empleado) {
+    let resultado = buscarEmpleado(empleado.cedula);
+    if (resultado == null) {
+        empleados.push(empleado);
+        return true;
+    } else {
+        return false;
+    }
+}
+
 const deshabilitarComponentesDeIngreso = function () {
     deshabilitarComponente("txtCedula");
     deshabilitarComponente("txtNombre");
