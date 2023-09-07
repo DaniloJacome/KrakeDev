@@ -1,4 +1,7 @@
 let palabraSecreta;
+let intentos = 0;
+let coincidencia = 0;
+let intentosError = 0;
 const esMayuscula = function (caracter) {
     if (caracter.charCodeAt(0) >= 65 && caracter.charCodeAt(0) <= 90) {
         return true;
