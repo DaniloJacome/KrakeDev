@@ -102,3 +102,27 @@ const ingresarLetra = function () {
         alert("SOLO SE ACEPTAN MAYUSCULA");
     }
 }
+
+const mostrarAhorcado = function () {
+    if (intentos == 1) {
+        mostrarImagen("ahorcadoImagen", "Ahorcado_01.png");
+    } else if (intentos == 2) {
+        mostrarImagen("ahorcadoImagen", "Ahorcado_02.png");
+    } else if (intentos == 3) {
+        mostrarImagen("ahorcadoImagen", "Ahorcado_03.png");
+    } else if (intentos == 4) {
+        mostrarImagen("ahorcadoImagen", "Ahorcado_04.png");
+    } else if (intentos == 5) {
+        mostrarImagen("ahorcadoImagen", "Ahorcado_05.png");
+    } else if (intentos == 6) {
+        mostrarImagen("ahorcadoImagen", "Ahorcado_06.png");
+    } else if (intentos == 7) {
+        mostrarImagen("ahorcadoImagen", "Ahorcado_07.png");
+    } else if (intentos == 8) {
+        mostrarImagen("ahorcadoImagen", "Ahorcado_08.png");
+    } else if (intentos == 9) {
+        mostrarImagen("ahorcadoImagen", "Ahorcado_09.png");
+    } else if (intentos == 10) {
+        mostrarImagen("ahorcadoImagen", "gameOver.gif");
+    }
+}
