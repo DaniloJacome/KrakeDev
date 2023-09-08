@@ -93,6 +93,26 @@ const agregarEmpleado = function (empleado) {
     }
 }
 
+const guardarRol = function () {
+    let calculoAporte;
+    let cedulaRecuperada = recuperarValorDiv("infoCedula");
+    let nombreRecuperado = recuperarValorDiv("infoNombre");
+    let sueldoRecuperado = parseFloat(recuperarValorDiv("infoSueldo"));
+    let aporteRecuperado = parseFloat(recuperarValorDiv("infoIESS"));
+    let totalRecuperado = parseFloat(recuperarValorDiv("infoPago"));
+    calculoAporte = parseFloat(calcularAporteEmpleador(sueldoRecuperado));
+    let rol = {}
+    rol.cedula = cedulaRecuperada;
+    rol.nombre = nombreRecuperado;
+    rol.sueldo = sueldoRecuperado;
+    rol.valorAPagar = totalRecuperado;
+    rol.aporteEmpleado = aporteRecuperado
+    rol.aporteEmpleador = calculoAporte.toFixed(2);
+    agregarRol(rol);
+
+}
+
+
 const calcularAporteEmpleado = function (sueldo) {
     let aporte = sueldo * 0.0945;
     return aporte;
