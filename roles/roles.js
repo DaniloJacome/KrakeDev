@@ -214,3 +214,13 @@ const ejecutarNuevo = function () {
     esNuevo = true;
 }
 
+const limpiarBoton = function () {
+    mostrarTextoEnCaja("txtCedula", "");
+    mostrarTextoEnCaja("txtNombre", "");
+    mostrarTextoEnCaja("txtApellido", "");
+    mostrarTextoEnCaja("txtSueldo", "");
+    mostrarTextoEnCaja("txtBusquedaCedula", "");
+    mostrarTextoEnCaja("txtBusquedaCedula", "");
+    habilitarComponente("btnNuevo");
+    deshabilitarComponente("btnGuardar");
+}
