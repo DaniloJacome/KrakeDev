@@ -112,7 +112,6 @@ const guardar = function () {
         } else {
             nuevaCedula = true;
         }
-
     } else {
         mostrarTexto("lblErrorCedula", " Tiene que tener 10 digitos");
     }
@@ -135,7 +134,6 @@ const guardar = function () {
         } else {
             nuevoNombre = true;
         }
-
     } else {
         mostrarTexto("lblErrorNombre", " Tiene que tener al menos 3 caracteres");
     }
@@ -158,7 +156,6 @@ const guardar = function () {
         } else {
             nuevoApellido = true;
         }
-
     } else {
         mostrarTexto("lblErrorApellido", " Tiene que tener al menos 3 caracteres");
     }
@@ -184,11 +181,28 @@ const guardar = function () {
                 alert("EMPLEADO GUARDADO CORRECTAMENTE");
                 mostrarEmpleados();
             } else {
+                limpiarBoton();
                 alert("YA EXISTE UN EMPLEADO CON LA CEDULA " + cedulaCaja);
             }
         }
+
+        if (esNuevo == false) {
+            for (let i = 0; i < empleados.length; i++) {
+                empleadosBuscar = empleados[i];
+                if (empleadosBuscar.cedula == cedulaCaja) {
+                    empleados[i].nombre = nombreCaja;
+                    empleados[i].apellido = apellidoCaja;
+                    empleados[i].sueldo = sueldoCaja;
+                    break;
+                }
+            }
+
+            alert("EMPLEADO MODIFICADO EXITOSAMENTE");
+            mostrarEmpleados();
+        }
         deshabilitarComponentesDeIngreso();
     }
+    esNuevo = false;
 }
 
 const ejecutarNuevo = function () {
@@ -199,3 +213,4 @@ const ejecutarNuevo = function () {
     habilitarComponente("btnGuardar");
     esNuevo = true;
 }
+
