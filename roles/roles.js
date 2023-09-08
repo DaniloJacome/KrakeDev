@@ -88,6 +88,20 @@ const deshabilitarComponentesDeIngreso = function () {
     deshabilitarComponente("btnGuardar");
 }
 
+const ejecutarBusqueda = function () {
+    let cedulaBusqueda = recuperarTexto("txtBusquedaCedula");
+    let resultadoBusqueda = buscarEmpleado(cedulaBusqueda);
+    if (resultadoBusqueda == null) {
+        alert("EMPLEADO NO EXISTE");
+    } else {
+        mostrarTextoEnCaja("txtCedula", resultadoBusqueda.cedula);
+        mostrarTextoEnCaja("txtNombre", resultadoBusqueda.nombre);
+        mostrarTextoEnCaja("txtApellido", resultadoBusqueda.apellido);
+        mostrarTextoEnCaja("txtSueldo", resultadoBusqueda.sueldo);
+        deshabilitarComponenteBusqueda();
+    }
+}
+
 const guardar = function () {
     let cedulaCaja = recuperarTexto("txtCedula");
     let nombreCaja = recuperarTexto("txtNombre");
