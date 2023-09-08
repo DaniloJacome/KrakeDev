@@ -119,6 +119,33 @@ const calcularRol = function () {
     }
 }
 
+const buscarRol = function (cedulaRol) {
+    let rolesBuscar;
+    let rolesEncontrado = null;
+    for (let i = 0; i < roles.length; i++) {
+        rolesBuscar = roles[i];
+        if (roles.cedula == cedulaRol) {
+            rolesEncontrado = rolesBuscar;
+            break;
+        }
+    }
+    return rolesEncontrado;
+
+}
+
+const agregarRol = function (rol) {
+    let resultado = buscarRol(rol.cedula);
+    if (resultado == null) {
+        roles.push(rol)
+        alert("SE HA GUARDADO CORRECTAMENTE");
+        limpiarRol();
+        return true;
+    } else {
+        arte("YA EXISTE");
+        return false;
+    }
+}
+
 const deshabilitarComponentesDeIngreso = function () {
     deshabilitarComponente("txtCedula");
     deshabilitarComponente("txtNombre");
@@ -257,6 +284,7 @@ const guardar = function () {
     }
     esNuevo = false;
 }
+
 
 const ejecutarNuevo = function () {
     habilitarComponente("txtCedula");
