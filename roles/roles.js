@@ -93,6 +93,32 @@ const agregarEmpleado = function (empleado) {
     }
 }
 
+const calcularAporteEmpleado = function (sueldo) {
+    let aporte = sueldo * 0.0945;
+    return aporte;
+}
+
+const calcularValorAPagar = function (sueldo, aporte, descuento) {
+    let valorAPagar = sueldo - (aporte + descuento);
+    return valorAPagar;
+};
+
+const calcularRol = function () {
+    let sueldo = recuperarValorDiv("infoSueldo");
+    let sueldoFloat = parseFloat(sueldo);
+    let descuento = recuperarFloatDiv("txtDescuentos");
+
+    if (descuento > 0 && descuento <= sueldoFloat) {
+        let resultadoAporte = calcularAporteEmpleado(sueldoFloat);
+        mostrarTexto("infoIESS", resultadoAporte);
+        let pagar = calcularValorAPagar(sueldoFloat, resultadoAporte, descuento);
+        mostrarTexto("infoPago", pagar.toFixed(2));
+        habilitarComponente("btnGuadarRol");
+    } else {
+        alert("INGRESE UN VALOR FLOTANTE EN EL DESCUENTO");
+    }
+}
+
 const deshabilitarComponentesDeIngreso = function () {
     deshabilitarComponente("txtCedula");
     deshabilitarComponente("txtNombre");
