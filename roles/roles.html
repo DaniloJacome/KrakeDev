@@ -8,7 +8,7 @@
 </head>
 </head>
 
-<body onload="mostrarOpcionEmpleado()">
+<body onload="mostrarOpcionRol()">
     <div class="menu">
         <div class="contenedorBoton">
             <input type="button" value="EMPLEADO" class="estiloBoton" onclick="mostrarOpcionEmpleado()"/>
@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 <div class="contenedorBoton">
-                    <input type="button" value="BUSCAR" class="estiloBoton" />
+                    <input type="button" value="BUSCAR" class="estiloBoton" onclick="ejecutarBusqueda()" />
                 </div>
             </div>
 
@@ -105,12 +105,12 @@
                         CEDULA
                     </div>
                     <div>
-                        <input type="text" class="cajaTexto" id="txtBusquedaCedula" />
+                        <input type="text" class="cajaTexto" id="txtBusquedaCedula2" />
                         <div class="error" id="lblErrorBusqueda"></div>
                     </div>
                 </div>
                 <div class="contenedorBoton">
-                    <input type="button" value="BUSCAR" class="estiloBoton" />
+                    <input type="button" value="BUSCAR" class="estiloBoton" onclick="buscarPorRol()" />
                 </div>
             </div>
 

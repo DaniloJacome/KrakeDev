@@ -70,6 +70,19 @@ const buscarEmpleado = function (cedulaIngresada) {
     return empleadoEncontrado;
 }
 
+const buscarPorRol = function () {
+    let recuperarCedula = recuperarTexto("txtBusquedaCedula2");
+    let personaEncontrada = buscarEmpleado(recuperarCedula);
+    if (personaEncontrada == null) {
+        alert("EMPLEADO NO EXISTE");
+    } else {
+        mostrarTexto("infoCedula", personaEncontrada.cedula);
+        mostrarTexto("infoNombre", personaEncontrada.nombre);
+        mostrarTexto("infoSueldo", personaEncontrada.sueldo);
+    }
+}
+
+
 const agregarEmpleado = function (empleado) {
     let resultado = buscarEmpleado(empleado.cedula);
     if (resultado == null) {
